@@ -34,4 +34,3 @@ To access the website, visit [https://www.aser-ghobara.github.io](https://www.as
 - Navigate through the different sections using the navigation menu at the top.
 - Click on the project cards to view more details and access relevant links.
 - Download the resume by clicking on the "Download Resume" button.
--
