@@ -19,21 +19,30 @@ nav ul {
   margin: 0;
   padding: 0;
   display: flex;
+  justify-content: center;
+  position: relative; /* Needed for z-index stacking */
 }
 
 nav li {
-  margin-right: 20px;
+  margin-left: 10px;
+  margin-right: 30px;
+  transition: transform 0.3s ease; /* Smooth animation for scaling */
+  font-size: 25px;
 }
 
 nav a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s ease;
 }
 
-nav a:hover {
-  color: #ff6600;
+nav li:hover {
+  transform: scale(1.5); /* Enlarge the hovered item */
+}
+
+nav li:not(:hover) {
+  transform: translateY(50%) scale(0.8); /* Translate and scale other items */
+  opacity: 0.7; /* Reduce opacity for other items */
 }
 
 main {
@@ -110,4 +119,20 @@ footer {
   color: #fff;
   padding: 20px;
   text-align: center;
+}
+
+.half-wheel-container {
+  width: 700px; /* Adjust this to control the size of the half wheel */
+  height: 50px; /* Adjust this to control the size of the half wheel */
+  background-color: #333;
+  border-radius: 0 0 100px 100px; /* Create the half wheel shape using border-radius */
+  overflow: hidden; /* Hide any overflow to maintain the shape */
+  position: relative; /* Needed for z-index stacking */
+
+}
+
+.wheelbox {
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
