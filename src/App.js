@@ -18,6 +18,7 @@ const App = () => {
           </ul>
         </nav>
       </header>
+      
     <div className="wheelbox">
       <div className="half-wheel-container">
           <nav>

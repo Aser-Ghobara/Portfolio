@@ -6,10 +6,27 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  /* Add the following background properties */
+  /*background: linear-gradient(135deg, #ff6600, #490000, #ff6600);*/
+  background: linear-gradient(135deg, #0a07bd, #060049, #7e7cff);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 header {
-  background-color: #333;
+  background-color: #1e1e1e;
   padding: 20px;
   color: #fff;
 }
@@ -115,7 +132,7 @@ button[type="submit"]:hover {
 }
 
 footer {
-  background-color: #333;
+  background-color: #1e1e1e;
   color: #fff;
   padding: 20px;
   text-align: center;
@@ -124,7 +141,8 @@ footer {
 .half-wheel-container {
   width: 700px; /* Adjust this to control the size of the half wheel */
   height: 50px; /* Adjust this to control the size of the half wheel */
-  background-color: #333;
+  background-color: #1e1e1e;
+  /*background-color: #333;*/
   border-radius: 0 0 100px 100px; /* Create the half wheel shape using border-radius */
   overflow: hidden; /* Hide any overflow to maintain the shape */
   position: relative; /* Needed for z-index stacking */
@@ -135,4 +153,113 @@ footer {
   justify-content: center;
   align-items: center;
   display: flex;
+}
+
+.content {
+  padding: 20px;
+  border-radius: 5px;
+  position: relative; /* Needed for z-index stacking */
+  z-index: 1; /* Needed for z-index stacking */
+}
+
+.hero {
+  background-color: #1e1e1e;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Add your custom styles here */
+
+/* ... (existing CSS code) ... */
+
+.hero h1,
+.hero p {
+  opacity: 1;
+  transform: translateY(30px);
+  font-family: Century Gothic, sans-serif;
+  font-weight: thick;
+  font-size: 50px;
+}
+
+.hero p {
+  font-size: 30px;
+  font-style: italic;
+}
+
+/* Animation for the typing effect */
+@keyframes typing {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Delay for each letter */
+.hero h1 span,
+.hero p span {
+  display: inline-block;
+  animation: typing 1s linear forwards;
+  animation-delay: calc(0.1s * var(--index));
+}
+
+/* Ensure the space between words is respected */
+.hero h1 span:last-child,
+.hero p span:last-child {
+  margin-right: 0;
+}
+
+.icons {
+  padding: 0;
+  list-style: none;
+  margin: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.icons li {
+  display: inline-block;
+  margin: 0.15 em;
+  position: relative;
+  font-size: 1.2em;
+}
+
+.icons i {
+  color: #fff;
+  position: absolute;
+  top: 21px;
+  left:21px;
+  transition: all 265ms east-out;
+}
+
+.icons a {
+  display: inline-block;
+}
+
+.icons a::before {
+  transform: scale(1);
+  content: " ";
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  display: block;
+  background: linear-gradient(45deg, #ff003c, #c648c8);
+  transition: all 265ms ease-out;
+}
+
+.icons a:hover::before {
+  transform: scale(0);
+  transition: all 265ms ease-in;
+}
+
+.icons a:hover i {
+  transform: scale(2.2);
+  color: #ff003c;
+  background: linear-gradient(45deg, #ff003c, #c648c8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 265ms ease-in;
 }
