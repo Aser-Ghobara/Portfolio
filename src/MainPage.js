@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import useTypingAnimation from './useTypingAnimation';
 import { Link } from 'react-router-dom';
+import Projects from './Projects';
 
 const MainPage = () => {
   // Use the custom hook for typing animation
@@ -48,6 +49,10 @@ const MainPage = () => {
         <a href='https://drive.google.com/file' target="_blank" rel="noreferrer">Resume</a>
         </button>
       </div>
+      <div className="scroll">
+        <Projects />
+        </div>
+
       </div>
     </section>
   );

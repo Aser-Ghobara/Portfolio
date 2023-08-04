@@ -8,7 +8,6 @@ import Skills from './Skills';
 import Contact from './Contact';
 
 const App = () => {
-
   return (
     <div className="portfolio">
       <header>
@@ -19,20 +18,19 @@ const App = () => {
         </nav>
       </header>
       
-    <div className="wheelbox">
-      <div className="half-wheel-container">
+      <div className="wheelbox">
+        <div className="half-wheel-container">
           <nav>
             <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/about">About</Link></li>
-            <li><Link to="/projects">Projects</Link></li>
-            <li><Link to="/skills">Skills</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/about">About</Link></li>
+              <li><Link to="/projects">Projects</Link></li>
+              <li><Link to="/skills">Skills</Link></li>
+              <li><Link to="/contact">Contact</Link></li>
             </ul>
           </nav>
         </div>
-    </div>
-
+      </div>
 
       <main>
         <Routes>
