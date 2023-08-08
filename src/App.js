@@ -8,25 +8,41 @@ import Skills from './Skills';
 import Contact from './Contact';
 
 const App = () => {
+  function scrollToSection1() {
+    const section1 = document.getElementById('section1');
+    section1.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  function scrollToSection2() {
+    const section2 = document.getElementById('section2');
+    section2.scrollIntoView({ behavior: 'smooth' });
+  }
+
+
   return (
     <div className="portfolio">
       <header>
         <nav>
           <ul>
-            
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/about" onClick={scrollToSection2} >About</Link></li>
+            <li>
+              {/* Pass the scrollToSection1 function as a prop */}
+              <Link to="/projects" onClick={scrollToSection1}>
+                Projects
+              </Link>
+            </li>
+            <li><Link to="/skills">Skills</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
           </ul>
         </nav>
       </header>
-      
+
       <div className="wheelbox">
         <div className="half-wheel-container">
           <nav>
             <ul>
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/about">About</Link></li>
-              <li><Link to="/projects">Projects</Link></li>
-              <li><Link to="/skills">Skills</Link></li>
-              <li><Link to="/contact">Contact</Link></li>
+              {/* Rest of your navigation items */}
             </ul>
           </nav>
         </div>
@@ -35,8 +51,7 @@ const App = () => {
       <main>
         <Routes>
           <Route path="/" element={<MainPage />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
+          <Route path="/projects" element={<MainPage />} />
           <Route path="/skills" element={<Skills />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
