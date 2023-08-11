@@ -333,6 +333,27 @@ footer {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-
-
   }
+
+  
+.icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: fixed;
+
+}
+
+
+.socials {
+  position: fixed;
+  top: 50%;
+  left: -50px; /* Initially hidden */
+  transform: translateY(-50%);
+  transition: left 0.3s ease;
+}
+
+.show-socials {
+  left: 0;
+}

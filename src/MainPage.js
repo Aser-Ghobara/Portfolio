@@ -5,7 +5,7 @@ import Projects from './Projects';
 import About from './About';
 
 const MainPage = () => {
-  // Use the custom hook for typing animation
+  const [showSocials, setShowSocials] = useState(false);
   const animatedName = useTypingAnimation('Aser Ghobara', 100);
   const animatedDescription = useTypingAnimation('Highlighting my skills and projects as a software engineer.', 50);
 
@@ -23,33 +23,48 @@ const MainPage = () => {
     <section id="home">
       <div className="home2">
         <div className="content">
-        <div className="container2">
-          <div className={`hero ${animate ? 'animate' : ''}`}>
-          <div class="image profile">          
-          <img src="https://images.pexels.com/photos/1382731/pexels-photo-1382731.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+          <div className="container2">
+            <div className={`hero ${animate ? 'animate' : ''}`}>
+              <div class="image profile">          
+                <img src="https://images.pexels.com/photos/1382731/pexels-photo-1382731.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
                     height="400px" alt="profile pic" />        
+              </div>
+              <div class="text">
+                <h1>{animatedName}</h1>
+                <p>{animatedDescription}</p>
+              </div>
+            </div>  
           </div>
-          <div class="text">
-            <h1>{animatedName}</h1>
-            <p>{animatedDescription}</p>
-          </div>
-          </div>  
-        </div>
         
-        <div className="socials">
-          <ul className="icons">
-            <li>
-              <a href="https://www.linkedin.com/in/aser-ghobara-0b1b3b1b0/" target="_blank" rel="noreferrer">
-                <i className="fa fa-linkedin" aria-hidden="true"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/aserghobara/" target="_blank" rel="noreferrer">
-                <i className="fa fa-instagram" aria-hidden="true"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
+        <div className="socials-panel">
+        <div className="sidepanel">
+  <div
+    className={`arrow ${showSocials ? 'show' : ''}`}
+    onMouseEnter={() => setShowSocials(true)}
+    onMouseLeave={() => setShowSocials(false)}
+  >
+
+    <i className="fa fa-angle-right" aria-hidden="true"></i>
+    
+  </div>
+
+  <div className={`socials ${showSocials ? 'show-socials' : ''}`}>
+    <ul className="icons">
+      <li>
+        <a href="https://www.linkedin.com/in/aser-ghobara-0b1b3b1b0/" target="_blank" rel="noreferrer">
+          <i className="fa fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.instagram.com/aserghobara/" target="_blank" rel="noreferrer">
+          <i className="fa fa-instagram" aria-hidden="true"></i>
+        </a>
+      </li>
+    </ul>
+    </div>
+  </div>
+        </div>  
+
         </div>
         
 
@@ -69,6 +84,7 @@ const MainPage = () => {
         </div>
 
         </div>
+        
         <div className="buttons">
           <button className="btnproject">
             <Link to="/projects">Projects</Link>
@@ -84,7 +100,8 @@ const MainPage = () => {
 
         <div id="section2">
           <About />
-           </div>
+        </div>
+     
       </div>
 
     </section>
