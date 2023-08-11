@@ -156,7 +156,8 @@ footer {
 }
 
 .content {
-  padding: 20px;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
   border-radius: 5px;
   position: relative; /* Needed for z-index stacking */
   z-index: 1; /* Needed for z-index stacking */
@@ -167,6 +168,11 @@ footer {
   color: #fff;
   padding: 20px;
   text-align: center;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
 }
 
 /* Add your custom styles here */
@@ -178,8 +184,7 @@ footer {
   opacity: 1;
   transform: translateY(30px);
   font-family: Century Gothic, sans-serif;
-  font-weight: thick;
-  font-size: 50px;
+  font-size: 4rem;
 }
 
 .hero p {
@@ -288,3 +293,46 @@ footer {
   line-height: 1.6;
   margin-bottom: 30px;
 }
+
+
+.hero{
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  }
+  .hero .left img{
+  width: 400px;
+  }
+  .hero .right {
+  color: var(--white);
+  margin-top: -7rem;
+  }
+  .hero .right h6{
+  font-size: 1.6rem;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  }
+  .hero .right h1{
+  font-size: 4rem;
+  font-weight: 100;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+  }
+  .hero .right h1 span{
+  color: var(--primary);
+  }
+  .hero .right p{
+  line-height: 1.9;
+  margin-bottom: 2rem;
+  }
+
+  .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+
+  }
