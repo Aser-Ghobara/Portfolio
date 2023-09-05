@@ -18,6 +18,11 @@ const App = () => {
     section2.scrollIntoView({ behavior: 'smooth' });
   }
 
+  function scrollToSection3() {
+    const section3 = document.getElementById('section3');
+    section3.scrollIntoView({ behavior: 'smooth' });
+  }
+
 
   return (
     <div className="portfolio">
@@ -26,13 +31,14 @@ const App = () => {
           <ul>
             <li><Link to="/">Home</Link></li>
             <li><Link to="/about" onClick={scrollToSection2} >About</Link></li>
+            
             <li>
               {/* Pass the scrollToSection1 function as a prop */}
               <Link to="/projects" onClick={scrollToSection1}>
                 Projects
               </Link>
             </li>
-            <li><Link to="/skills">Skills</Link></li>
+
             <li><Link to="/contact">Contact</Link></li>
           </ul>
         </nav>
@@ -52,7 +58,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/projects" element={<MainPage />} />
-          <Route path="/skills" element={<Skills />} />
+          <Route path="/about" element={<MainPage />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
