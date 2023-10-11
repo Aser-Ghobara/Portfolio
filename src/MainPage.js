@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import useTypingAnimation from './useTypingAnimation';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import Projects from './Projects';
 import About from './About';
 
