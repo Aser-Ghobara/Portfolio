@@ -2,9 +2,9 @@ import React from 'react';
 import { Link, Route, Routes } from 'react-router-dom';
 import './index.css';
 import MainPage from './MainPage';
-import About from './About';
-import Projects from './Projects';
-import Skills from './Skills';
+// import About from './About';
+// import Projects from './Projects';
+// import Skills from './Skills';
 import Contact from './Contact';
 
 const App = () => {
@@ -18,10 +18,10 @@ const App = () => {
     section2.scrollIntoView({ behavior: 'smooth' });
   }
 
-  function scrollToSection3() {
-    const section3 = document.getElementById('section3');
-    section3.scrollIntoView({ behavior: 'smooth' });
-  }
+  // function scrollToSection3() {
+  //   const section3 = document.getElementById('section3');
+  //   section3.scrollIntoView({ behavior: 'smooth' });
+  // }
 
 
   return (
