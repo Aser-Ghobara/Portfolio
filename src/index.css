@@ -375,7 +375,7 @@ footer {
 .socials {
   position: fixed;
   top: 50%;
-  left: -50px; /* Initially hidden */
+  left: 10px; /* Initially hidden */
   transform: translateY(-50%);
   transition: left 0.3s ease;
 }
@@ -385,14 +385,23 @@ footer {
 }
 
 .projcontent {
-  padding: 50px;
+  /* padding: 50px;
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: rgb(25,25,25);
   margin: -40px;
-  margin-right: -50px;
+  margin-right: -50px; */
+  height: 100vh;
+   /* Cover the entire width of the viewport */
+  padding: 50px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(25, 25, 25);
+  margin: 0; /* Remove any margin */
 }
 
 .projects {
@@ -485,11 +494,74 @@ footer {
 
 .aboutMe-skills {
   flex: 2;
- 
+  padding-top: 20px;
 }
 
 .aboutMe-info {
   flex: 1;
+}
+
+.skills {
+  margin-top: 10px;
+}
+
+.bar {
+  height: 10px;
+  background-color: #f5f5f5;
+  margin-top: 5px;
+  padding-bottom: 8px;
+}
+
+.progress {
+  height: 100%;
+  width: 0;
+  background-color: #007bff;
+  transition: width 1s ease-in-out;
+}
+
+.progresshtml {
+  background-color: #e44d26;
+  margin-right: 20%;
+}
+
+.progresscss {
+  background-color: #e44d26;
+  margin-right: 0%;
+}
+
+.progressjs {
+  background-color: #e44d26;
+  margin-right: 30%;
+}
+
+.progresscpp {
+  background-color: #e44d26;
+  margin-right: 20%;
+}
+
+.progressc {
+  background-color: #e44d26;
+  margin-right: 30%;
+}
+
+.progressjava {
+  background-color: #e44d26;
+  margin-right: 35%;
+}
+
+.progresspython {
+  background-color: #e44d26;
+  margin-right: 10%;
+}
+
+
+.full-page {
+  height: 100vh; /* Set the section height to 100% of the viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 
@@ -526,8 +598,12 @@ footer {
 
 /* Custom styles for carousel arrows */
 .carousel-root {
+  width: 70%;
+  max-width: 100%; /* Adjust the maximum width as needed */
+  height: auto;
   /* Adjust these values to make the arrows bigger */
   .control-arrow {
+    
     color:red;
     font-size: 100px; /* Change this value to make the arrows bigger */
     padding: 20px; /* Adjust padding as needed */

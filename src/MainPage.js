@@ -49,7 +49,7 @@ const MainPage = () => {
   <div className={`socials ${showSocials ? 'show-socials' : ''}`}>
     <ul className="icons">
       <li>
-        <a href="https://www.linkedin.com/in/aser-ghobara-0b1b3b1b0/" target="_blank" rel="noreferrer">
+        <a href="https://www.linkedin.com/in/aser-ghobara/" target="_blank" rel="noreferrer">
           <i className="fa fa-linkedin" aria-hidden="true"></i>
         </a>
       </li>

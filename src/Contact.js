@@ -7,12 +7,10 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact">
+    <section id="contact" className="full-page">
       <div className="content">
         <h2>Contact Me</h2>
-        <p>
-          If you'd like to get in touch with me, you can use the form below to send me a message:
-        </p>
+        <p>If you'd like to get in touch with me, you can use the form below to send me a message:</p>
         <form onSubmit={handleSubmit}>
           <div>
             <label htmlFor="name">Name:</label>
