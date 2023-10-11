@@ -394,14 +394,25 @@ footer {
   margin: -40px;
   margin-right: -50px; */
   height: 100vh;
-   /* Cover the entire width of the viewport */
-  padding: 50px;
-  color: white;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   background-color: rgb(25, 25, 25);
-  margin: 0; /* Remove any margin */
+  padding: 20px; /* Adjust padding for smaller screens */
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .projcontent {
+    padding: 50px; 
+  }
+}
+
+@media (min-width: 1024px) {
+  .projcontent {
+    padding: 100px; 
+  }
 }
 
 .projects {
@@ -504,6 +515,37 @@ footer {
 .skills {
   margin-top: 10px;
 }
+
+@media (min-width: 1024px) {
+  .aboutMe {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .aboutMe-title,
+  .aboutMe-info,
+  .aboutMe-img,
+  .aboutMe-skills {
+    padding: 40px;
+  }
+}
+
+/* @media (min-width: 768px) {
+  .aboutMe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .aboutMe-title,
+  .aboutMe-info,
+  .aboutMe-img,
+  .aboutMe-skills {
+    padding: 30px;
+  }
+} */
+
 
 .bar {
   height: 10px;
